@@ -3,10 +3,14 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <cstdlib>
+
+
+
 int main()
 {
+    float screenSizeX = 800, screenSizeY = 600;
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "3D Engine");
+    sf::RenderWindow window(sf::VideoMode(screenSizeX, screenSizeY), "3D Engine");
 
     //create player
     sf::CircleShape player;
@@ -27,6 +31,14 @@ int main()
     sf::RectangleShape rectangle1;
     rectangle1.setSize(sf::Vector2f(50, 50));
     rectangle1.setPosition(100, 100);
+
+    //create ramka
+    sf::RectangleShape ramka;
+    ramka.setSize(sf::Vector2f(screenSizeX-20, screenSizeY-20));
+    ramka.setFillColor(sf::Color::Transparent);
+    ramka.setOutlineColor(sf::Color::Red);
+    ramka.setOutlineThickness(10);
+    ramka.setPosition(10, 10);
 
     //create convex
     sf::ConvexShape convex1;
@@ -53,12 +65,17 @@ int main()
 
         //Clear window
         window.clear();
+
 #pragma region Draw zone
-        window.draw(player);
+
+        
+
+        window.draw(ramka);
         window.draw(rectangle1);
         window.draw(circle1);
         window.draw(circle2);
         window.draw(convex1);
+        window.draw(player);
 #pragma endregion
 
 
