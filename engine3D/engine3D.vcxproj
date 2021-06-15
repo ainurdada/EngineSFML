@@ -151,10 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DrawSystem.cpp" />
     <ClCompile Include="Movement.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DrawSystem.h" />
     <ClInclude Include="Movement.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

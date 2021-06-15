@@ -1,4 +1,5 @@
 #include "Movement.h"
+#include "DrawSystem.h"
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -15,7 +16,7 @@ int main()
     //create player
     sf::CircleShape player;
     player.setRadius(10);
-    player.setPosition(20, 20);
+    player.setPosition(150, 20);
 
     //create circle1
     sf::CircleShape circle1;
@@ -76,8 +77,9 @@ int main()
         window.draw(circle2);
         window.draw(convex1);
         window.draw(player);
+        RaycastDraw(player, window);
 #pragma endregion
-
+        
 
         //Update the window
         window.display();

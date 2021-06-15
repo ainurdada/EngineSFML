@@ -21,9 +21,15 @@
     <ClCompile Include="Movement.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="DrawSystem.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Movement.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawSystem.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
